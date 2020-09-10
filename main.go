@@ -18,8 +18,8 @@ func main() {
 	if len(diags) != 0 {
 		for _, diag := range diags {
 			fmt.Fprintln(os.Stderr, diag)
-			os.Exit(1)
 		}
+		os.Exit(1)
 	}
 
 	for _, provider := range mod.ProviderConfigs {
